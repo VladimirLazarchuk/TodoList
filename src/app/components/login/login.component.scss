@@ -1,0 +1,62 @@
+.wrapper {
+  background: url('../../../assets/img/bg_image.jpg') top center / cover no-repeat ;
+  padding-top: 140px;
+  min-height: 100vh;
+  @media screen and (min-height: 1280px) {
+    padding-top: 250px;
+  }
+  @media screen and (max-height: 769px){
+    padding-top: 50px;
+  }
+  .logo {
+    width: 100%;
+    max-width: 373px;
+  }
+  .heading {
+    margin-top: 30px;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 68px;
+    @media screen and (max-width: 522px) {
+      font-size: 30px;
+    }
+  }
+  .button {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 52px;
+    border-radius: 26px;
+    font-size: 25px;
+    margin-bottom: 25px;
+    width: 346px;
+    display: inline-block;
+    cursor: pointer;
+    .icon {
+      line-height: 52px;
+      color: white;
+      font-size: 30px;
+      float: left;
+      text-align: center;
+      width: 60px;
+      border-right: 2px solid white;
+    }
+    .text {
+      color: white;
+      font-size: 18px;
+      line-height: 52px;
+      float: left;
+      width: 271px;
+    }
+    @media screen and (max-width: 410px) {
+      width: 290px;
+      .icon {
+        font-size: 18px;
+        width: 50px;
+      }
+      .text {
+        width: 240px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+

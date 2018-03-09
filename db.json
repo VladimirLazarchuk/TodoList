@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "102022680262889212406",
+      "fullName": "Владимир Лазарчук",
+      "userEmail": "northwoodzp@gmail.com",
+      "token": "ya29.GlwwBbF-yovzjvi39vCPXam_grIOtvKsP4InCsojk8qqH7HRt7sOx0Ko9um2apAtgpENWXhvh3m8g_B6PljxKyHT6FJZk7jCaj0KFEv8RFFKZEJ4XTXlyzAEUdIafg"
+    },
+    {
+      "id": "10204400817977244",
+      "fullName": "Владимир Лазарчук",
+      "userEmail": "northwood@list.ru",
+      "token": "EAAHyZCHjIpc8BAJUp4abzcR4mF09LtF9nUDcRkNVXVvlmmcn8PKGvaSJWYFnV71tPdJHZCRUkCbVquJppj3rxZAJ9kfsW2uKdfAL7UpJ6dMGXZC2nZBk7VQfcWZArfVx2z0xzf0FmZCjQIvxDFwYSW8ZA63tqQGWyzdE9RxtKpdzMRI80YQlEpkOVDMAUFOEWcKsLo8GIcXHHwZDZD"
+    }
+  ],
+  "tasks": [
+    {
+      "id": 1,
+      "userID": "102022680262889212406",
+      "taskList": [
+        {
+          "text": "Some task",
+          "isDone": false
+        }
+      ]
+    }
+  ]
+}

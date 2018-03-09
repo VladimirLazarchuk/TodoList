@@ -1,0 +1,67 @@
+<header class="header container-fluid">
+    <div class="row">
+        <div class="col-xs-6 col-lg-10">
+            <div class="logo">
+                <img src="assets/img/logo-horizont.png" alt="Horizontal Logo">
+            </div>
+        </div>
+        <div class="col-xs-6 col-lg-2">
+            <div class="buttons text-right">
+                <button class="info" routerLink="about">
+                    <i class="fa fa-info"></i>
+                </button>
+                <button class="logout" (click)="signOut()">
+                    <i class="fa fa-sign-out"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid wrapper">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 input">
+            <input type="text" class="form-control" placeholder="What needs to be done?" (keyup.enter)="addItem()" [(ngModel)]="inputText">
+            <div class="buttonAdd fa fa-plus" (click)="addItem()"></div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 items">
+            <div class="itemList">
+                <app-item *ngFor="let item of tasks | done : displayMode; let ind = index" [item]="item"
+                          (itemManipulated)="handleManipulation($event, item, ind)"></app-item>
+                <div class="bg_middle"></div>
+                <div class="bg_bottom"></div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+            <div class="countFilter clearfix">
+                <div class="count">
+                    {{getCounts(tasks)}} items left
+                </div>
+                <div class="filter">
+                    <div>
+                        <button type="button" class="btn btn-default"
+                                [ngClass]="{'active': displayMode === 'all'}"
+                                (click)="showMode('all')">
+                            All
+                        </button>
+                        <button type="button" class="btn btn-default"
+                                [ngClass]="{'active': displayMode === 'active'}"
+                                (click)="showMode('active')">
+                            Active
+                        </button>
+                        <button type="button" class="btn btn-default"
+                                [ngClass]="{'active': displayMode === 'completed'}"
+                                (click)="showMode('completed')">
+                            Completed
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-right clear" (click)="clearCompleted()">
+            <i class="fa fa-times delete"></i>
+            Clear completed
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

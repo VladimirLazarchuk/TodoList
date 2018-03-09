@@ -1,0 +1,84 @@
+.wrapper {
+  background-color: white;
+}
+
+.header {
+  padding: 50px 40px 50px 50px;
+}
+
+.logo {
+  float: left;
+}
+
+.closeButton {
+  float: right;
+  color: #26a69a;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 3.58px;
+  cursor: pointer;
+}
+
+.content {
+  color: #26a69a;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  h4 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+  }
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+.OITLogo {
+  margin-top: 230px;
+  img {
+    width: 80%;
+  }
+}
+
+.social {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  .link {
+    color: #f50057;
+    font-size: 36px;
+    margin: 0 17px;
+    text-decoration: none;
+    &:hover {
+      color: #26a69a;
+    }
+    transition: .2s all;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .social {
+    .link {
+      margin: 0 6px;
+    }
+  }
+}
+
+.footer {
+  color: #ffffff;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 80px;
+  background-color: #26a69a;
+}
+
+.info {
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: #26a69a;
+}

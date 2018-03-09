@@ -1,0 +1,72 @@
+.item {
+  position: relative;
+  border-bottom: 2px dashed #1bbbb4;
+  padding-top: 10px;
+  padding-right: 40px;
+  .textField {
+    display: none;
+  }
+  .taskTitle {
+    padding: 15px 10px 15px 64px;
+    background: url("../../../assets/img/checkbox.png") 12px center / 32px no-repeat transparent;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-right: 30px;
+    color: #898989;
+    cursor: pointer;
+  }
+  &.done {
+    box-shadow: 0 0 10px #a5a5a5;
+    .taskTitle {
+      background-image: url("../../../assets/img/checkbox-checked.png");
+      text-decoration: line-through;
+      color: #352f2c;
+    }
+    .buttons {
+      .edit {
+        display: none;
+      }
+      .delete {
+        color: #f50057;
+      }
+    }
+  }
+  .buttons {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0, -50%);
+    .edit, .delete, .editingOk {
+      padding: 10px;
+      cursor: pointer;
+      color: #7accc8;
+      font-size: 18px;
+    }
+    .editingOk {
+      display: none;
+    }
+  }
+  &.isEditing {
+    .textField {
+      display: inline;
+      margin-bottom: 15px;
+      margin-left: 10px;
+      width: 85%;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+    }
+    .taskTitle {
+      display: none;
+    }
+    .buttons {
+      .editingOk {
+        display: inline;
+      }
+      .edit, .delete {
+        display: none;
+      }
+    }
+  }
+}

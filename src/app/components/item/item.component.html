@@ -1,0 +1,10 @@
+<div class="item" [ngClass]="{'done': item.completed, 'isEditing': isEditing}" >
+  <label class="taskTitle" (click)="toggleStatus()"> {{item['task']}}</label>
+  <input type="text" class="textField form-control" [(ngModel)]="item['task']">
+  <div class="buttons" (click)="itemManipulate($event)">
+    <i class="fa fa-pencil edit" [attr.data-editStart]="true"></i>
+    <i class="fa fa-times delete" [attr.data-delete]="true"></i>
+    <i class="fa fa-check editingOk" [attr.data-editEnd]="true"></i>
+  </div>
+</div>
+
